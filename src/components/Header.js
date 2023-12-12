@@ -5,22 +5,10 @@ import AuthContext from './authContext'
 
 const Header = () => {
     const { authenticate, setIsAuthenticate } = useContext(AuthContext)
-    // const [user, setUser] = useState()
-    // const [products, setProducts] = useState([])
-    // useEffect(() => {
-    //     if (authenticate) {
-    //         axios.get(`http://localhost:5500/users?${authenticate.id}`)
-    //             .then(res => {
-    //                 if (res.data[0].cart) {
-    //                     setProducts(res.data[0].cart)
-    //                     setUser(res.data[0])
-    //                 }
-    //             })
-    //     }
-    // }, [])
+
     const handleLogout = (e) => {
         e.preventDefault()
-        axios.post(`http://localhost:5500/current-user`, {})
+        axios.post(`http://localhost:3100/current-user`, {})
             .then(res => setIsAuthenticate(null))
     }
 

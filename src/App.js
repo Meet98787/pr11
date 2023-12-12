@@ -18,7 +18,7 @@ const App = () => {
   const [authenticate, setIsAuthenticate] = useState(null)
 
   useEffect(() => {
-      axios.get('http://localhost:5500/current-user')
+      axios.get('http://localhost:3100/current-user')
           .then((res) => {
               if (Object.keys(res.data).length < 1) {
                   setIsAuthenticate(null)

@@ -25,14 +25,14 @@ const Signup = () => {
       setLoading(true);
 
       try {
-        const checkEmail = await axios.get(`http://localhost:5500/users?email=${input.email}`);
+        const checkEmail = await axios.get(`http://localhost:3100/users?email=${input.email}`);
 
         if (checkEmail.data.length > 0) {
           setInput({ ...checkEmail.data[0], id: undefined });
           setErrors({ ...errors, email: 'Email is already in use' });
         } else {
           setErrors({});
-          await axios.post('http://localhost:5500/users', input);
+          await axios.post('http://localhost:3100/users', input);
           navigate('/login');
         }
       } catch (error) {

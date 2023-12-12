@@ -8,7 +8,7 @@ const GuestRoute = ({ Cmp }) => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        axios.get('http://localhost:5500/current-user').then((res) => {
+        axios.get('http://localhost:3100/current-user').then((res) => {
             if (Object.keys(res.data).length > 0) {
                 navigate('/')
             }

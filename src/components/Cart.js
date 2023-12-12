@@ -9,7 +9,7 @@ const Cart = () => {
 
     useEffect(() => {
         if (authenticate) {
-            axios.get(`http://localhost:5500/users?${authenticate.id}`)
+            axios.get(`http://localhost:3100/users?${authenticate.id}`)
                 .then(res => {
                     if (res.data[0].cart) {
                         setProducts(res.data[0].cart)
@@ -23,7 +23,7 @@ const Cart = () => {
         const newUser = { ...user }
         newUser.cart.splice(id, 1)
         setUser(newUser)
-        axios.put(`http://localhost:5500/users/${authenticate.id}`, user)
+        axios.put(`http://localhost:3100/users/${authenticate.id}`, user)
             .then(res => { console.log(res) })
     }
 

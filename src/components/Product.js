@@ -7,7 +7,7 @@ const Product = () => {
   const { authenticate } = useContext(AuthContext);
 
   useEffect(() => {
-    axios.get('http://localhost:5500/products').then((res) => setProducts(res.data));
+    axios.get('http://localhost:3100/products').then((res) => setProducts(res.data));
   }, []);
 
   const updateCart = async (user, product) => {
@@ -25,13 +25,13 @@ const Product = () => {
     }
 
     const updatedUser = { ...user, cart };
-    const resCart = await axios.put(`http://localhost:5500/users/${authenticate.id}`, updatedUser);
+    const resCart = await axios.put(`http://localhost:3100/users/${authenticate.id}`, updatedUser);
     console.log(resCart.data);
   };
 
   const addCart = async (product) => {
     try {
-      const res = await axios.get(`http://localhost:5500/users/${authenticate.id}`);
+      const res = await axios.get(`http://localhost:3100/users/${authenticate.id}`);
       const user = res.data;
       await updateCart(user, product);
     } catch (error) {

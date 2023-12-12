@@ -22,14 +22,14 @@ const Login = () => {
             setErrors(checkValidate)
         } else {
             setErrors({})
-            axios.get(`http://localhost:5500/users?email=${input.email}`)
+            axios.get(`http://localhost:3100/users?email=${input.email}`)
                 .then(res => {
                     if (res.data.length < 1 || res.data[0].password !== input.password) {
                         setErrors({ ...errors, password: 'Invalid email or password' })
                     } else {
                         setErrors({})
                         setInput(initialInput)
-                        axios.post(`http://localhost:5500/current-user`, res.data[0])
+                        axios.post(`http://localhost:3100/current-user`, res.data[0])
                             .then(res => console.log(res.data))
                         setIsAuthenticate(res.data[0])
                     }

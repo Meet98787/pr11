@@ -75,41 +75,7 @@
       "email": "meet@gmail.com",
       "password": "123123",
       "id": 1,
-      "cart": [
-        {
-          "id": "1",
-          "name": "Shirt",
-          "color": "White",
-          "type": "Men",
-          "material": "Polyster",
-          "brand": "Nike",
-          "img": "https://m.media-amazon.com/images/I/61a93+AuOBL._SX679_.jpg",
-          "price": "$ 199",
-          "qty": 1
-        },
-        {
-          "id": "2",
-          "name": "Shadi",
-          "color": "Red",
-          "type": "Women",
-          "material": "Cotton",
-          "brand": "Adidas",
-          "img": "https://m.media-amazon.com/images/I/71zXw2z1w3L._SL1500_.jpg",
-          "price": "$ 99",
-          "qty": 2
-        },
-        {
-          "id": "5",
-          "name": " Jeans",
-          "color": "White",
-          "type": "Men",
-          "material": "Polyster",
-          "brand": "Nike",
-          "img": "https://m.media-amazon.com/images/I/616xchp1ECL._SL1440_.jpg",
-          "price": "$ 789",
-          "qty": 3
-        }
-      ]
+      "cart": []
     },
     {
       "name": "quants_user_token",
